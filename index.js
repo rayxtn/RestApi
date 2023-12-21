@@ -13,8 +13,15 @@ app.post("/create_user",(req,res) => {
     users.push({username:user.username,password:user.password});
     res.json({loggedIn:true,status:"success"});
 }
-
 )
+app.get("/users",(req,res)=>{
+    res.send(users);
+})
+
+app.delete("/user_delete", (req,res)=>{
+    res.send(users);
+})
+
 
 
 
